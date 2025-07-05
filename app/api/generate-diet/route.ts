@@ -2,6 +2,7 @@ export const dynamic = "force-dynamic";
 import { NextRequest, NextResponse } from 'next/server';
 import { generateDietPlan } from '@/lib/openai';
 import { supabase } from '@/lib/supabase';
+import { appendLeadToSheet } from '@/lib/googleSheets';
 
 export async function POST(request: NextRequest) {
   try {
@@ -82,6 +83,26 @@ export async function POST(request: NextRequest) {
 
     if (dietPlanError) {
       console.error('Error saving diet plan:', dietPlanError);
+    }
+
+    // Append to Google Sheets (non-blocking)
+    try {
+      await appendLeadToSheet({
+        name: userData.name,
+        age: userData.age,
+        weight: userData.weight,
+        height: userData.height,
+        injuries: userData.injuries || 'None',
+        fitness_level: userData.fitness_level,
+        fitness_goal: userData.fitness_goal,
+        workout_days: userData.workout_days,
+        dietary_restrictions: userData.dietary_restrictions || 'None',
+        phone_number: userData.phone_number,
+        diet_plan: dietPlan,
+        created_at: new Date().toISOString()
+      });
+    } catch (gsError) {
+      console.error('Google Sheets append failed:', gsError);
     }
 
     // Send WhatsApp message (if Twilio is configured)

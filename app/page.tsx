@@ -50,10 +50,10 @@ export default function HomePage() {
             animate={{ opacity: 1, x: 0 }}
             className="hidden md:flex items-center space-x-6"
           >
-            <Badge variant="secondary" className="bg-blue-500/20 text-blue-200 border-blue-400/30">
+            {/* <Badge variant="secondary" className="bg-blue-500/20 text-blue-200 border-blue-400/30">
               <Zap className="h-3 w-3 mr-1" />
               AI Powered
-            </Badge>
+            </Badge> */}
           </motion.div>
         </nav>
       </header>
@@ -89,7 +89,7 @@ export default function HomePage() {
               variants={fadeInUp}
               className="text-xl md:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed"
             >
-              Our AI fitness coach creates a custom nutrition plan tailored to your goals, 
+              Our smart assistant builds your ideal nutrition plan…, 
               fitness level, and dietary preferences. No generic advice - just results.
             </motion.p>
 
@@ -149,10 +149,10 @@ export default function HomePage() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our AI Fitness Coach?
+            Why FitAI is the Smarter Way to Train?
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              Advanced AI technology meets personalized fitness coaching
+            Next-Gen Coaching Tailored to Your Goals
             </p>
           </motion.div>
 
@@ -172,8 +172,8 @@ export default function HomePage() {
               },
               {
                 icon: Zap,
-                title: "AI-Powered",
-                description: "Advanced machine learning algorithms analyze your data for optimal results",
+                title: "Smart Engineered",
+                description: "Built to understand your fitness profile and personalize accordingly",
                 color: "text-green-400"
               },
               {
@@ -185,7 +185,7 @@ export default function HomePage() {
               {
                 icon: MessageCircle,
                 title: "Chat Interface",
-                description: "Natural conversation with our AI coach - no complicated forms to fill",
+                description: "Chat with your virtual wellness guide – no forms, just conversation",
                 color: "text-purple-400"
               },
               {
@@ -229,7 +229,7 @@ export default function HomePage() {
               Success Stories
             </h2>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto">
-              Real people, real results with our AI-powered diet plans
+            Real People. Real Results. Personalized Just for You.
             </p>
           </motion.div>
 
@@ -244,13 +244,13 @@ export default function HomePage() {
               {
                 name: "Sarah M.",
                 role: "Busy Professional",
-                content: "Lost 15 lbs in 8 weeks following the AI-generated plan. The personalized approach made all the difference!",
+                content: "Lost 15 lbs in 8 weeks with a plan that felt tailor-made. The personalized touch made all the difference!",
                 rating: 5
               },
               {
                 name: "Mike T.",
                 role: "Fitness Beginner", 
-                content: "Finally found a diet plan that works with my schedule. The AI understood my lifestyle perfectly.",
+                content: "Finally found a plan that works with my schedule. It felt like it truly understood my lifestyle",
                 rating: 5
               },
               {
@@ -319,7 +319,7 @@ export default function HomePage() {
             <span className="text-2xl font-bold text-white">FitAI</span>
           </div>
           <p className="text-slate-400">
-            Transforming fitness through AI-powered personalization
+          Smarter Fitness. Smarter Nutrition. Better You.
           </p>
         </div>
       </footer>

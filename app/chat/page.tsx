@@ -51,7 +51,7 @@ type Question = {
 const questions: Question[] = [
   { 
     key: 'name', 
-    question: "Hi! I'm your personal AI fitness coach. What's your first name?", 
+    question: "Hi! I'm your personal  fitness coach. What's your first name?", 
     type: 'text',
     placeholder: "Enter your first name"
   },
@@ -132,7 +132,7 @@ export default function ChatPage() {
     {
       id: '1',
       type: 'bot',
-      content: "Hi! I'm your personal AI fitness coach. What's your first name?",
+      content: "Hi! I'm your personal fitness coach. What's your first name?",
       timestamp: new Date()
     }
   ]);
@@ -365,7 +365,7 @@ export default function ChatPage() {
                 <Card className="p-4 bg-slate-800 text-slate-100 border-slate-700">
                   <div className="flex items-center space-x-2">
                     <Loader2 className="h-4 w-4 animate-spin" />
-                    <span>AI is typing...</span>
+                    <span>Working on it...</span>
                   </div>
                 </Card>
               </div>
